@@ -1,2 +1,2 @@
 # mibaro
-full development of mi baro, 
+full development of mi baro.
