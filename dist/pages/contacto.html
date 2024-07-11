@@ -49,7 +49,7 @@
                     <a href="./pages/roadmap.html" class="hover:underline me-4 md:me-6">roadmap</a>
                 </li>
                 <li>
-                    <a href="./pages/contacto.html" class="hover:underline me-4 md:me-6">contacto</a>
+                    <a href="/dist/pages/contacto.html" class="hover:underline me-4 md:me-6">contacto</a>
                 </li>
                 <li>
                     <a href="#" class="hover:underline me-4 md:me-6">aviso de privacidad</a>
@@ -61,3 +61,20 @@
     </footer>
 </body>
 </html>
+
+<!-- 
+{
+    "version": 2,
+    "builds": [
+    { "src": "dist/index.html", "use": "@vercel/static" },
+    { "src": "dist/**/*.js", "use": "@vercel/static" },
+    { "src": "img/**", "use": "@vercel/static" },
+    { "src": "dist/**/*.css", "use": "@vercel/static"}
+    ],
+    "routes": [
+    {
+        "src": "/(.*)",
+        "dest": "dist/$1"
+    }
+    ]
+} -->
