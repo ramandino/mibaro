@@ -634,6 +634,16 @@ html {
   margin-right: 4rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -724,6 +734,18 @@ html {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.ml-12 {
+  margin-left: 3rem;
+}
+
+.ml-14 {
+  margin-left: 3.5rem;
 }
 
 .block {
@@ -860,6 +882,10 @@ html {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1126,6 +1152,10 @@ html {
   padding-bottom: 4rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1296,6 +1326,10 @@ html {
 
   .sm\:max-w-32 {
     max-width: 8rem;
+  }
+
+  .sm\:max-w-sm {
+    max-width: 24rem;
   }
 
   .sm\:p-8 {
