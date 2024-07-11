@@ -4,8 +4,7 @@
     { "src": "dist/index.html", "use": "@vercel/static" },
     { "src": "dist/**/*.js", "use": "@vercel/static" },
     { "src": "img/**", "use": "@vercel/static" },
-    { "src": "dist/**/*.css", "use": "@vercel/static"},
-    { "src": "/pages/contacto.html", "dest": "/dist/pages/contacto.html" }
+    { "src": "dist/**/*.css", "use": "@vercel/static"}
     ],
     "routes": [
     {
