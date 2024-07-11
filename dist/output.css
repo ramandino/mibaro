@@ -609,6 +609,16 @@ html {
   margin-bottom: auto;
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-14 {
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
