@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>contacto</title>
+</head>
+<body>
+    <header class="lg:mx-auto bg-slate-950 ">
+        <nav class=" lg:h-20 lg:flex lg:mx-28 flex mr-auto h-20 ml-10 lg:content-around">
+            <div class="lg:flex text-white/75 lg:mt-0 mt-5 lg:gap-5 lg:mr-auto">
+                <a href="/dist/index.html">
+                    <img class="w-36 h-auto lg:mt-4" src="/img/logo.png" href="#" alt="mainlogo">    
+                </a>
+                <a href="#" class="hidden lg:block lg:content-center hover:text-sky-800">roadmap</a>
+                <!-- <a href="#" class="hidden lg:block lg:content-center hover:text-blue-500">equipo</a> -->
+                <a href="/pages/contacto.html" class="hidden lg:block lg:content-center hover:text-sky-800">contacto</a>
+            </div>
+            <div class="flex text-white/75 lg:gap-5">
+                <button class = "hidden lg:block hover:text-sky-800"id="entrar-btn">entrar</button>
+                <button class = "hidden lg:block hover:text-sky-800"id="comenzar-btn">empezar</button>
+            </div>
+        </nav>
+    </header>
+    <section class="bg-slate-950 flex flex-col items-center dark:bg-gray-900 ">
+        <div class="py-8 lg:py-16 px-4 h-full mx-20 con max-w-screen-md">
+            <h2 class="text-4xl tracking-tight font-extrabold text-center gradient-text ">feedback</h2>
+            <p class="mb-3 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">¿tienes algo en mente sobre lo que se deberia de incluir o quitar?</p>
+            <form action="#" class="space-y-5 mt-5 flex flex-col lg:mt-20">
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-white/75 dark:text-gray-300">asunto</label>
+                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="error en login" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-white/75 dark:text-gray-400">tus comentarios</label>
+                    <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="no me gusta..."></textarea>
+                </div>
+                <button type="submit" class="rounded-full mx-auto py-3 px-5 lg:ease-linear lg:duration-300 text-white/75 bg-cyan-950 hover:bg-sky-800 ">Send message</button>
+                <div class=" text-white/75 mx-auto font-light text-center text-gray-500 sm:text-xl"> o mandame un mail a ramiroandino987@gmail.com</div>
+            </form>
+            
+        </div>
+    </section>
+    <footer class="bg-white flex lg:h-20 flex-col justify-center content-center">
+        <div class="w-full lg:mx-28 lg:max-w-screen-xl p-4 flex gap-3 flex-col items-center justify-between">
+            <ul class="flex flex-wrap items-center mt-3 text-m font-medium text-slate-950 ">
+                <li>
+                    <a href="./pages/roadmap.html" class="hover:underline me-4 md:me-6">roadmap</a>
+                </li>
+                <li>
+                    <a href="./pages/contacto.html" class="hover:underline me-4 md:me-6">contacto</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">aviso de privacidad</a>
+                </li>
+            </ul>
+            <span class="text-m text-slate-950 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">mibaro</a>.
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
