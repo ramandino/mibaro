@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'selector',
-  content: ["./dist/**/*.{html,js}"],
+  content: ["./dist/**/*.{html,js}",  
+  "./src/**/*.{html,js}", // Additional path if you have source files outside dist
+  "./*.html"],
+  
   theme: {
     extend: {
       colors: {
-        primary: {"main":"#004AAD","verdeclaro":"#b0e5d0","verdeoscuro":"rgba(92,202,238,0.41)"}
+        primary: {"main":"#004AAD","verdeclaro":"#b0e5d0","verdeoscuro":"rgba(92,202,238,0.41)","oscuroverde":"#27576F"}
       }
 
     },
