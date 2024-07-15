@@ -6,75 +6,90 @@
     <link rel="stylesheet" href="/dist/output.css">
     <title>dashboard</title>
 </head>
-<body class="bg-slate-950 h-screen mx-28">
-    <header class="lg:mx-auto">
-        <nav class=" lg:h-20 lg:flex flex mr-auto h-20 ml-10">
-            <div class="flex text-white ml-auto lg:gap-5">
-                <button class = "hidden lg:block hover:text-sky-800"id="comenzar-btn">salir</button>
-            </div>
-        </nav>
-    </header>
-    <section>
-        <div class="max-w-full  mt-10">
-            <h1 id="greetinguser" class= "gradient-text font-bold text-3xl">hola, ramiro.</h1>
-            <h1 class= "gradient-text font-bold text-3xl">el total de tu baro es</h1>
-            <div class="flex">
-                <div id="totalbaro" class= "text-white font-medium text-6xl">$5,354,789</div>
-                <div class="ml-auto h-10 flex mt-auto gap-3">
-                    <button class="rounded-full ease-linear lg:duration-150 hover:bg-white text-slate-950 px-6 bg-primary-verdeclaro">agregar</button>
-                    <button class="rounded-full ease-linear lg:duration-150 hover:bg-white hover:text-slate-950 text-white px-6 bg-red-500">eliminar</button>
+<body class="bg-slate-950 h-screen">
+    <section id="bodywindow" class="mx-28">
+        <header class="lg:mx-auto">
+            <nav class=" lg:h-20 lg:flex flex mr-auto h-20 ml-10">
+                <div class="flex text-white ml-auto lg:gap-5">
+                    <button class = "hidden lg:block hover:text-sky-800"id="comenzar-btn">salir</button>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="max-w-full  mt-10">
+                <h1 id="greetinguser" class= "gradient-text font-bold text-3xl">hola, ramiro.</h1>
+                <h1 class= "gradient-text font-bold text-3xl">el total de tu baro es</h1>
+                <div class="flex">
+                    <div id="totalbaro" class= "text-white font-medium text-6xl">$5,354,789</div>
+                    <div class="ml-auto h-10 flex mt-auto gap-3">
+                        <button id="mostrarmodal" class="rounded-full ease-linear lg:duration-150 hover:bg-white text-slate-950 px-6 bg-primary-verdeclaro">agregar</button>
+                        <button class="rounded-full ease-linear lg:duration-150 hover:bg-white hover:text-slate-950 text-white px-6 bg-red-500">eliminar</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section id="areaparacajas" class="mt-20 flex pb-28 flex-wrap gap-10">
+            <!-- <template id="espaciocaja"> -->
+                <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
+                    <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
+                    <div class=" ml-6 text-white ">baro en snowball:</div>
+                    <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
+                </div>
+        </section>        
+            <!-- </template> absolute top-[36px] right-0 left-1/2 z-50 -->
     </section>
-    <section id="areaparacajas" class="mt-20 flex pb-28 flex-wrap gap-10">
-        <!-- <template id="espaciocaja"> -->
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
+    <section class="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+        <div id="modal" tabindex="-1" aria-hidden="true" class=" hidden top-5overflow-y-auto overflow-x-hidden w-full md:inset h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-md max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                            crear nuevo espacio
+                        </h3>
+                        <button id="cerrarmodal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <form class="p-4 md:p-5">
+                        <div class="grid gap-4 mb-4 grid-cols-2">
+                            <div class="col-span-2">
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">nombre de espacio</label>
+                                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="fondo de ahorro" required="">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">cantidad</label>
+                                <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$ 50,000" required="">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                                <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                    <option selected="">Select category</option>
+                                    <option value="TV">TV/Monitors</option>
+                                    <option value="PC">PC</option>
+                                    <option value="GA">Gaming/Console</option>
+                                    <option value="PH">Phones</option>
+                                </select>
+                            </div>
+                            <div class="col-span-2">
+                                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Description</label>
+                                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write product description here"></textarea>                    
+                            </div>
+                        </div>
+                        <button type="submit" class="inline-flex items-center font-bold bg-primary-verdeclaro ease-linear duration-300 hover:bg-primary-oscuroverde text-primary-oscuroverde hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-350 rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                            crear
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-            <div class=" min-w-80 font-bold rounded-lg text-xl bg-primary-oscuroverde">
-                <div class=" ml-6 mt-4 text-primary-verdeclaro ">startups</div>
-                <div class=" ml-6 text-white ">baro en snowball:</div>
-                <div id="valorespacio" class=" text-2xl ml-6 mb-4 text-white">$ 76,546</div>
-            </div>
-        <!-- </template> -->
+        </div> 
     </section>
+    <script src="/dist/main.js" type="module" ></script>
 </body>
 </html>
